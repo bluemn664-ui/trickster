@@ -1,0 +1,225 @@
+/* =========================================
+   common.css
+   모든 페이지가 함께 쓰는 스타일 (기본 설정, 헤더, 버튼, 푸터)
+   ========================================= */
+
+/* ----- 색상 모음: 여기만 바꾸면 사이트 전체 색이 바뀌어요 ----- */
+:root {
+  --text-color: #222222;   /* 기본 글자색 */
+  --sub-color: #666666;    /* 설명 글자색 */
+  --point-color: #e8590c;  /* 강조색 (주요 버튼, 현재 메뉴) */
+  --line-color: #e5e5e5;   /* 구분선 */
+  --soft-bg: #f7f7f7;      /* 연한 회색 배경 */
+}
+
+/* ----- 기본 설정 ----- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* 링크로 이동했을 때 고정된 헤더에 제목이 가려지지 않게 */
+[id] {
+  scroll-margin-top: 80px;
+}
+
+body {
+  font-family: "Noto Sans KR", "Malgun Gothic", sans-serif;
+  background-color: #ffffff;
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 내용 폭을 가운데로 맞추는 상자 */
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* 페이지 안의 큰 구역 */
+.section {
+  padding: 60px 0;
+  border-top: 1px solid var(--line-color);
+}
+
+.section-title {
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+/* ----- 헤더 ----- */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #ffffff;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 6px;
+}
+
+.nav-menu a {
+  display: block;
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+
+.nav-menu a:hover {
+  background-color: var(--soft-bg);
+}
+
+/* 지금 보고 있는 페이지의 메뉴 */
+.nav-menu a.active {
+  background-color: var(--point-color);
+  color: #ffffff;
+}
+
+/* 휴대폰에서만 보이는 메뉴 열기 버튼 */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+  width: 40px;
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  background-color: var(--text-color);
+}
+
+/* ----- 페이지 맨 위 소개 (지역, 동화 만들기, 게시판 페이지) ----- */
+.page-intro {
+  padding: 60px 0 40px;
+}
+
+.page-intro h1 {
+  font-size: 34px;
+  margin-bottom: 12px;
+}
+
+.page-intro p {
+  color: var(--sub-color);
+}
+
+/* ----- 버튼 ----- */
+.btn {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1px solid var(--text-color);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: var(--text-color);
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--soft-bg);
+}
+
+/* 다음 행동으로 이끄는 주요 버튼 */
+.btn-dark {
+  background-color: var(--point-color);
+  border-color: var(--point-color);
+  color: #ffffff;
+}
+
+.btn-dark:hover {
+  background-color: #c94c0a;
+}
+
+/* ----- 이미지 자리 (나중에 <img>로 바꾸세요) ----- */
+.img-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #eeeeee;
+  color: #999999;
+  font-size: 14px;
+  border-radius: 6px;
+}
+
+/* ----- 푸터 ----- */
+.footer {
+  padding: 30px 0;
+  border-top: 1px solid var(--line-color);
+  color: #888888;
+  font-size: 14px;
+  text-align: center;
+}
+
+/* ----- 휴대폰 화면 (768px 이하) ----- */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* 메뉴는 평소에 숨겨 두고, 메뉴 열기 버튼을 누르면 보여줌 */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--line-color);
+  }
+
+  .nav-menu.open {
+    display: flex;
+  }
+
+  .nav-menu a {
+    padding: 10px 12px;
+  }
+
+  .page-intro h1 {
+    font-size: 26px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+}

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>동화 게시판 | 트릭스터와 창의성</title>
+  <link rel="stylesheet" href="../css/common.css">
+  <link rel="stylesheet" href="../css/board.css">
+</head>
+<body>
+
+  <!-- ① 헤더 (메뉴) -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="../index0930.html" class="logo">트릭스터와 창의성</a>
+
+      <button type="button" class="menu-toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="../index0930.html">홈</a></li>
+          <li><a href="korea.html">한국</a></li>
+          <li><a href="china.html">중국</a></li>
+          <li><a href="japan.html">일본</a></li>
+          <li><a href="usa.html">미국</a></li>
+          <li><a href="world.html">세계</a></li>
+          <li><a href="../index0930.html#write">동화 만들기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ② 게시판 소개 -->
+    <section class="page-intro">
+      <div class="container">
+        <h1>친구들의 트릭스터 이야기</h1>
+        <p>친구들이 만든 트릭스터 동화를 읽어 보세요. 선생님이 확인한 이야기만 보여요.</p>
+      </div>
+    </section>
+
+    <!-- ③ 동화 올리기 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">내 동화 올리기</h2>
+
+        <div class="upload-box">
+          <p class="safe-note">
+            <b>안전 약속</b> 이름 대신 별명을 쓰세요. 학교나 사는 곳, 전화번호는 적지 마세요.
+          </p>
+
+          <!-- 올릴 동화가 없을 때 보이는 안내 -->
+          <div id="no-story" class="no-story" hidden>
+            <p>아직 완성한 동화가 없어요. 먼저 동화를 만들고 [게시판에 올리기]를 눌러 주세요.</p>
+            <a href="../index0930.html#write" class="btn btn-dark">동화 만들러 가기</a>
+          </div>
+
+          <!-- 올릴 동화가 있을 때 보이는 입력칸 -->
+          <form id="upload-form" hidden>
+            <label for="nickname" class="field-name">별명</label>
+            <input type="text" id="nickname" maxlength="12" placeholder="예) 꾀돌이토끼">
+
+            <p class="field-name">동화 미리보기</p>
+            <div class="preview">
+              <h3 id="preview-title"></h3>
+              <p id="preview-body"></p>
+            </div>
+
+            <p id="upload-message" class="upload-message"></p>
+            <button type="submit" class="btn btn-dark">올리기</button>
+          </form>
+
+          <!-- 올린 뒤 나타나는 안내 -->
+          <p id="done-message" class="done-message" hidden>
+            동화를 올렸어요! 선생님이 확인한 뒤 공개돼요.
+          </p>
+        </div>
+
+        <!-- 내가 올린 동화 (선생님 확인을 기다리는 중) -->
+        <div id="waiting-area" class="waiting-area" hidden>
+          <h3>확인을 기다리는 내 동화</h3>
+          <ul id="waiting-list" class="waiting-list"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 친구들의 동화 목록 (선생님이 확인한 동화) -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">친구들의 동화</h2>
+
+        <!-- 새 동화는 <article class="story-card"> 블록을 복사해서 추가하세요 -->
+        <div class="story-list">
+          <article class="story-card">
+            <h3>얼음 강을 건넌 여우</h3>
+            <p class="story-info">별명: 달리는구름 · 주인공: 여우</p>
+            <details>
+              <summary>이야기 읽기</summary>
+              <p>
+                깊은 숲속에 재주 많은 여우가 살았어요. 어느 겨울, 여우는 강 건너 친구 집에 가야 했지만 다리가 무너져 있었어요.
+                강가에는 심술궂은 곰이 버티고 서서 아무도 지나가지 못하게 했어요.
+                여우는 "곰님, 강물이 꽁꽁 얼었는지 무거운 곰님이 먼저 걸어 봐 주세요. 곰님처럼 용감한 동물은 없잖아요!"라고 말했어요.
+                곰이 우쭐해서 얼음 위를 쿵쿵 걸어가자, 얼음이 단단하다는 걸 알게 된 여우도 뒤따라 건넜어요.
+                그 뒤로 숲속 동물들은 겨울마다 곰이 밟아 준 길로 강을 건너게 되었어요.
+              </p>
+            </details>
+          </article>
+
+          <article class="story-card">
+            <h3>까마귀의 반짝이 시장</h3>
+            <p class="story-info">별명: 별빛연필 · 주인공: 까마귀</p>
+            <details>
+              <summary>이야기 읽기</summary>
+              <p>
+                시끌벅적한 시장 지붕 위에 말하는 까마귀가 살았어요. 까마귀는 배가 고팠지만 빵집 주인이 빵을 한 조각도 나눠 주지 않았어요.
+                빵집 주인은 반짝이는 물건이라면 무엇이든 갖고 싶어 하는 욕심쟁이였어요.
+                까마귀는 강가에서 주운 반짝이는 조약돌을 빵과 바꾸자고 했어요.
+                빵집 주인은 조약돌을 창가에 걸어 두었는데, 햇빛에 반짝이자 손님들이 구경하러 몰려들었어요.
+                빵집은 마을에서 가장 유명한 '반짝이 빵집'이 되었고, 까마귀는 날마다 빵을 얻게 되었어요.
+              </p>
+            </details>
+          </article>
+
+          <article class="story-card">
+            <h3>거인의 낮잠 시계</h3>
+            <p class="story-info">별명: 초록고래 · 주인공: 원숭이</p>
+            <details>
+              <summary>이야기 읽기</summary>
+              <p>
+                높은 산꼭대기 아래에 장난꾸러기 원숭이가 살았어요. 잠꾸러기 거인이 코를 골 때마다 산이 흔들려서 마을 사람들이 잠을 잘 수 없었어요.
+                거인은 누가 깨우면 화를 내며 바위를 던졌어요.
+                원숭이는 거인을 깨우는 대신, 거인의 코 고는 소리에 맞춰 북을 쳐서 노래를 만들었어요.
+                거인은 그 노래가 너무 좋아서 스스로 일어나 함께 춤을 추었어요.
+                그 뒤로 마을에는 '거인의 노래'라는 새로운 축제가 생겼어요.
+              </p>
+            </details>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ 다시 쓰기 안내 -->
+    <div class="container rewrite-nav">
+      <p>친구들의 이야기를 읽고 새로운 생각이 떠올랐나요?</p>
+      <a href="../index0930.html#write" class="btn btn-dark">나도 쓰러 가기</a>
+    </div>
+  </main>
+
+  <!-- ⑥ 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <p>이미지 출처: 준비 중</p>
+      <p>만든 사람: 이름을 적어 주세요 · 만든 목적: 트릭스터 이야기로 어린이의 창의성을 기르기 위해</p>
+      <p>&copy; <span id="year"></span> 트릭스터와 창의성</p>
+    </div>
+  </footer>
+
+  <script src="../js/common.js"></script>
+  <script src="../js/board.js"></script>
+</body>
+</html>

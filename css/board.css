@@ -1,0 +1,174 @@
+/* =========================================
+   board.css
+   동화 게시판 페이지(board.html)에서 쓰는 스타일
+   ========================================= */
+
+/* ----- ③ 동화 올리기 ----- */
+.upload-box {
+  max-width: 720px;
+  padding: 24px;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+}
+
+.safe-note {
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  background-color: #fff4e6;
+  font-size: 15px;
+}
+
+.safe-note b {
+  margin-right: 6px;
+  color: var(--point-color);
+}
+
+.no-story p {
+  margin-bottom: 14px;
+  color: var(--sub-color);
+}
+
+.field-name {
+  display: block;
+  margin: 16px 0 6px;
+  font-weight: bold;
+}
+
+#nickname {
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-size: 15px;
+  font-family: inherit;
+}
+
+#nickname:focus {
+  outline: 2px solid var(--point-color);
+  border-color: transparent;
+}
+
+.preview {
+  padding: 16px;
+  border-radius: 6px;
+  background-color: var(--soft-bg);
+}
+
+.preview h3 {
+  margin-bottom: 6px;
+}
+
+.preview p {
+  color: #444444;
+}
+
+.upload-message {
+  min-height: 24px;
+  margin: 12px 0 8px;
+  color: #d6336c;
+  font-size: 14px;
+}
+
+.done-message {
+  padding: 14px 16px;
+  border: 2px solid var(--point-color);
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+/* 확인을 기다리는 내 동화 */
+.waiting-area {
+  max-width: 720px;
+  margin-top: 24px;
+}
+
+.waiting-area h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+}
+
+.waiting-list li {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--line-color);
+}
+
+.waiting-label {
+  flex-shrink: 0;
+  padding: 2px 10px;
+  border-radius: 20px;
+  background-color: var(--soft-bg);
+  color: var(--sub-color);
+  font-size: 13px;
+}
+
+/* ----- ④ 친구들의 동화 목록 ----- */
+.story-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 한 줄에 3개 */
+  gap: 16px;
+  align-items: start;
+}
+
+.story-card {
+  padding: 20px;
+  border: 1px solid var(--line-color);
+  border-radius: 8px;
+}
+
+.story-card h3 {
+  font-size: 18px;
+  margin-bottom: 4px;
+}
+
+.story-info {
+  font-size: 13px;
+  color: var(--sub-color);
+  margin-bottom: 12px;
+}
+
+.story-card summary {
+  cursor: pointer;
+  color: var(--point-color);
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.story-card details p {
+  margin-top: 10px;
+  color: #444444;
+  font-size: 15px;
+}
+
+/* ----- ⑤ 다시 쓰기 안내 ----- */
+.rewrite-nav {
+  padding: 20px 20px 60px;
+  text-align: center;
+}
+
+.rewrite-nav p {
+  margin-bottom: 14px;
+}
+
+/* ----- 휴대폰 화면 (768px 이하) ----- */
+@media (max-width: 768px) {
+  .upload-box {
+    padding: 18px;
+  }
+
+  #upload-form .btn,
+  .no-story .btn,
+  .rewrite-nav .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* 동화 카드를 한 줄에 1개씩 */
+  .story-list {
+    grid-template-columns: 1fr;
+  }
+}

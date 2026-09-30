@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="세계의 트릭스터 이야기를 읽고, 나만의 트릭스터 동화를 만들어 보는 어린이 창의성 사이트">
+  <title>트릭스터와 창의성</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+  <!-- ① 헤더 (메뉴) -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index0930.html" class="logo">트릭스터와 창의성</a>
+
+      <!-- 휴대폰에서만 보이는 메뉴 열기 버튼 -->
+      <button type="button" class="menu-toggle" aria-label="메뉴 열기">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="index0930.html" class="active">홈</a></li>
+          <li><a href="html/korea.html">한국</a></li>
+          <li><a href="html/china.html">중국</a></li>
+          <li><a href="html/japan.html">일본</a></li>
+          <li><a href="html/usa.html">미국</a></li>
+          <li><a href="html/world.html">세계</a></li>
+          <li><a href="#write">동화 만들기</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ② 히어로 -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
+          <p class="hero-label">세계의 장난꾸러기 이야기</p>
+          <h1>트릭스터와 창의성</h1>
+          <p>
+            트릭스터는 상황을 뒤집고 새로운 것을 만들어 내는 이야기 속 주인공이에요.
+            때로는 자기 꾀에 넘어가기도 하죠.
+          </p>
+          <p>세계의 트릭스터 이야기를 읽고, 나만의 이야기를 만들어 보세요.</p>
+          <div class="hero-buttons">
+            <a href="#write" class="btn btn-dark">동화 만들기</a>
+            <a href="#tricksters" class="btn">트릭스터 만나기</a>
+          </div>
+        </div>
+        <img src="img/tiger_main.png" alt="소나무 가지 위의 까치를 바라보며 웃고 있는 호랑이" class="hero-img">
+      </div>
+    </section>
+
+    <!-- ③ 대표 트릭스터 -->
+    <section id="tricksters" class="section">
+      <div class="container">
+        <h2 class="section-title">세계의 트릭스터를 만나 보세요</h2>
+        <p class="section-desc">카드를 누르면 그 나라의 트릭스터 이야기를 읽을 수 있어요.</p>
+
+        <div class="trickster-list">
+          <a href="html/korea.html#tiger" class="trickster-card">
+            <img src="img/k_tiger.png" alt="한쪽 눈을 찡긋하며 장난스럽게 춤추는 호랑이" class="card-img">
+            <h3>한국 · 호랑이</h3>
+            <p>엄마 흉내를 내며 오누이를 속이려 했지만, 결국 자기 꾀에 넘어갔어요.</p>
+          </a>
+          <a href="html/china.html#wukong" class="trickster-card">
+            <img src="img/c_sonogong.png" alt="여의봉을 어깨에 메고 구름 위를 걷는 손오공" class="card-img">
+            <h3>중국 · 손오공</h3>
+            <p>72가지 변신술로 하늘나라를 발칵 뒤집어 놓은 원숭이예요.</p>
+          </a>
+          <a href="html/japan.html#susanoo" class="trickster-card">
+            <img src="img/j_susano.png" alt="손 위에 번개 구름을 띄우고 웃고 있는 스사노오" class="card-img">
+            <h3>일본 · 스사노오</h3>
+            <p>술로 머리 여덟 개 달린 큰 뱀을 잠재운 말썽꾸러기 신이에요.</p>
+          </a>
+          <a href="html/usa.html#coyote" class="trickster-card">
+            <img src="img/a_coyote.png" alt="보름달 앞에서 한쪽 눈을 찡긋하는 코요테" class="card-img">
+            <h3>미국 · 코요테</h3>
+            <p>동물 친구들과 이어달리기로 사람들에게 불을 가져다준 꾀쟁이예요.</p>
+          </a>
+        </div>
+
+        <div class="center">
+          <a href="html/world.html" class="btn">더 넓은 세계의 트릭스터 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ④ 동화 만들기 (글쓰기) -->
+    <section id="write" class="section write-section">
+      <div class="container">
+        <h2 class="section-title">나도 트릭스터 이야기를 만들 수 있어요</h2>
+        <p class="section-desc">
+          6단계 공식을 따라 한 칸씩 채우면 짧은 동화가 완성돼요. 쓰던 글은 자동으로 저장돼요.
+          <a href="html/board.html" class="board-link">친구들의 동화 구경하기 →</a>
+        </p>
+
+        <!-- 이야기 공식 + 예시 -->
+        <div class="formula">
+          <ol class="formula-steps">
+            <li>주인공</li>
+            <li>문제</li>
+            <li>상대</li>
+            <li>뒤집기</li>
+            <li>뜻밖의 결과</li>
+            <li>새로 생긴 것</li>
+          </ol>
+
+          <p class="example-title">예시 이야기 「토끼와 호랑이」</p>
+          <div class="table-wrap">
+            <table class="example-table">
+              <tr>
+                <th>주인공</th><th>문제</th><th>상대</th><th>뒤집기</th><th>뜻밖의 결과</th><th>새로 생긴 것</th>
+              </tr>
+              <tr>
+                <td>꾀 많은 토끼가 살았어요.</td>
+                <td>배고픈 호랑이가 토끼를 잡아먹으려 했어요.</td>
+                <td>호랑이는 힘이 세지만 욕심이 많았어요.</td>
+                <td>토끼는 "꼬리를 강물에 담그고 있으면 물고기가 잔뜩 걸려요"라고 말했어요.</td>
+                <td>밤새 강물이 얼어서 호랑이 꼬리가 꽁꽁 붙어 버렸어요.</td>
+                <td>힘이 약해도 꾀로 이길 수 있다는 이야기가 생겼어요.</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+
+        <!-- 이야기 재료 뽑기 -->
+        <div class="pick-box">
+          <p>뭘 쓸지 모르겠다면 재료를 뽑아 보세요. 비어 있는 칸에 자동으로 들어가요.</p>
+          <button type="button" id="pick-btn" class="btn">재료 뽑기</button>
+          <div class="pick-result">
+            <div class="pick-item"><span>트릭스터</span><strong id="pick-trickster">?</strong></div>
+            <div class="pick-item"><span>상대</span><strong id="pick-rival">?</strong></div>
+            <div class="pick-item"><span>배경</span><strong id="pick-place">?</strong></div>
+          </div>
+        </div>
+
+        <!-- 이야기 쓰기 -->
+        <form id="story-form" class="story-form">
+          <label class="field">
+            <span class="field-name">제목</span>
+            <input type="text" id="story-title" maxlength="40" placeholder="예) 꾀돌이 토끼의 얼음 낚시">
+          </label>
+
+          <div class="step-box">
+            <label for="step1"><b>1. 주인공</b> — 어떤 트릭스터가 나오나요?</label>
+            <p class="hint">힌트: 누구인지, 어떤 성격인지 적어 보세요.</p>
+            <textarea id="step1" rows="2"></textarea>
+          </div>
+
+          <div class="step-box">
+            <label for="step2"><b>2. 문제</b> — 어떤 곤란한 일이 생겼나요?</label>
+            <textarea id="step2" rows="2"></textarea>
+          </div>
+
+          <div class="step-box">
+            <label for="step3"><b>3. 상대</b> — 누가 트릭스터를 막고 있나요?</label>
+            <textarea id="step3" rows="2"></textarea>
+          </div>
+
+          <div class="step-box">
+            <label for="step4"><b>4. 뒤집기</b> — 아무도 생각하지 못한 방법은 무엇인가요?</label>
+            <p class="hint">힌트: 상대가 믿고 있는 것을 거꾸로 이용해 보세요.</p>
+            <textarea id="step4" rows="3"></textarea>
+          </div>
+
+          <div class="step-box">
+            <label for="step5"><b>5. 뜻밖의 결과</b> — 어떻게 되었나요?</label>
+            <div class="choices">
+              <button type="button" class="choice" data-result="성공">성공</button>
+              <button type="button" class="choice" data-result="실패">실패</button>
+              <button type="button" class="choice" data-result="전혀 새로운 결과">전혀 새로운 결과</button>
+            </div>
+            <textarea id="step5" rows="2"></textarea>
+          </div>
+
+          <div class="step-box">
+            <label for="step6"><b>6. 새로 생긴 것</b> — 이 이야기 때문에 무엇이 새로 생겼나요?</label>
+            <textarea id="step6" rows="2"></textarea>
+          </div>
+
+          <p id="form-message" class="form-message"></p>
+          <button type="submit" class="btn btn-dark btn-wide">이야기 완성!</button>
+        </form>
+
+        <!-- 완성된 동화: [이야기 완성!]을 누르면 나타나요 -->
+        <div id="result" class="result" hidden>
+          <p class="result-label">나의 트릭스터 동화</p>
+          <h3 id="result-title"></h3>
+          <p id="result-choice" class="result-choice"></p>
+          <p id="result-body" class="result-body"></p>
+
+          <div class="think">
+            <p><b>생각해 볼까요?</b></p>
+            <ul>
+              <li>내가 뒤집은 방법은 새로웠나요?</li>
+              <li>속은 쪽은 어떤 기분이었을까요?</li>
+              <li>이야기 때문에 무엇이 새로 생겼나요?</li>
+            </ul>
+          </div>
+
+          <div class="result-buttons">
+            <button type="button" id="rewrite-btn" class="btn">다시 쓰기</button>
+            <a href="#tricksters" class="btn">트릭스터 이야기 읽으러 가기</a>
+            <button type="button" id="board-btn" class="btn btn-dark">게시판에 올리기</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ⑤ 부모님과 선생님께 -->
+    <section class="section">
+      <div class="container parents">
+        <h2 class="section-title">부모님과 선생님께</h2>
+        <p>
+          트릭스터 이야기는 정답이 하나로 정해지지 않은 애매한 상황에서, 주인공이 상황을 뒤집어
+          새로운 결과를 만들어 내는 이야기입니다. 아이들은 이 과정을 따라가며 익숙한 생각을
+          다르게 바라보는 창의적인 사고를 경험할 수 있습니다.
+        </p>
+        <p>
+          이야기를 함께 읽은 뒤 "트릭스터의 꾀는 옳았을까?", "속은 쪽은 어떤 마음이었을까?"처럼
+          정답이 없는 질문으로 이야기를 나누어 주세요. 아이가 쓴 동화도 함께 읽고 칭찬해 주시면
+          큰 힘이 됩니다.
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ⑥ 푸터 -->
+  <footer class="footer">
+    <div class="container">
+      <p>이미지 출처: AI</p>
+      <p>만든 사람: 청호 · 만든 목적: 트릭스터 이야기로 어린이의 창의성을 기르기 위함</p>
+      <p>&copy; <span id="year"></span> 트릭스터와 창의성</p>
+    </div>
+  </footer>
+
+  <script src="js/common.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
