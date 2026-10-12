@@ -106,6 +106,86 @@
   color: var(--sub-color);
 }
 
+/* ----- ③-2 트릭스터 관련 책 ----- */
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 한 줄에 5권 */
+  gap: 20px;
+}
+
+/* 책 표지: 사진 대신 색과 제목으로 만든 책 모양 */
+.book-cover {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  aspect-ratio: 3 / 4;
+  width: 78%;
+  margin: 0 auto 18px;
+  padding: 22px 16px 16px 24px;
+  border-radius: 3px 8px 8px 3px;
+  color: #ffffff;
+  /* 왼쪽 책등 그림자 + 책이 놓인 그림자 */
+  box-shadow:
+    inset 8px 0 0 rgba(0, 0, 0, 0.18),
+    inset 9px 0 0 rgba(255, 255, 255, 0.15),
+    0 8px 18px rgba(0, 0, 0, 0.18);
+  transition: transform 0.3s;
+}
+
+.book-card:hover .book-cover {
+  transform: translateY(-6px) rotate(-1.5deg);
+}
+
+.book-cover-title {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.3;
+  font-family: Georgia, "Nanum Myeongjo", serif;
+}
+
+.book-cover-author {
+  font-size: 12px;
+  opacity: 0.85;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  padding-top: 8px;
+}
+
+/* 누구를 위한 책인지 표시 */
+.book-tag {
+  display: inline-block;
+  padding: 2px 10px;
+  margin-bottom: 8px;
+  border-radius: 20px;
+  background-color: #fff4e6;
+  color: var(--point-color);
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.book-tag-adult {
+  background-color: #edf0f5;
+  color: #1e2a42;
+}
+
+.book-card h3 {
+  font-size: 17px;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  word-break: keep-all; /* 한글 낱말이 중간에 끊기지 않게 */
+}
+
+.book-info {
+  font-size: 13px;
+  color: var(--sub-color);
+  margin-bottom: 10px;
+}
+
+.book-desc {
+  font-size: 14px;
+  color: #444444;
+  word-break: keep-all;
+}
+
 /* ----- ④ 동화 만들기 ----- */
 .write-section {
   background-color: var(--soft-bg);
@@ -171,37 +251,136 @@
   background-color: var(--soft-bg);
 }
 
-/* 재료 뽑기 */
+/* 재료 뽑기: 카드 뒤집기 */
 .pick-box {
   background-color: #ffffff;
   border: 1px solid var(--line-color);
   border-radius: 8px;
-  padding: 20px;
+  padding: 24px 20px;
   margin-bottom: 20px;
+  text-align: center;
+}
+
+.pick-title {
+  font-size: 19px;
+  margin-bottom: 4px;
 }
 
 .pick-box p {
-  margin-bottom: 10px;
+  color: var(--sub-color);
+  margin-bottom: 20px;
 }
 
 .pick-result {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 10px;
-  margin-top: 14px;
+  gap: 14px;
+  margin-bottom: 20px;
 }
 
-.pick-item {
-  border: 1px dashed #bbbbbb;
-  border-radius: 6px;
-  padding: 10px;
-  text-align: center;
+/* 카드 한 장 (perspective: 3D로 뒤집히는 느낌을 주는 거리) */
+.pick-card {
+  height: 170px;
+  perspective: 800px;
 }
 
-.pick-item span {
+/* 앞면과 뒷면을 함께 담고 있는 상자. 이 상자가 돌아가면서 카드가 뒤집혀요 */
+.pick-card-inner {
+  position: relative;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* JS가 .flipped 를 붙이면 카드가 뒤집혀 앞면(재료)이 보여요 */
+.pick-card.flipped .pick-card-inner {
+  transform: rotateY(180deg);
+}
+
+.pick-card-back,
+.pick-card-front {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  padding: 14px;
+  border-radius: 10px;
+  backface-visibility: hidden; /* 뒤집혔을 때 반대쪽 면은 숨기기 */
+}
+
+/* 카드 색: 남색 + 금색 (여기만 바꾸면 카드 색이 바뀌어요) */
+.pick-card {
+  --card-navy: #1e2a42;
+  --card-gold: #c9a96e;
+  --card-cream: #fbf8f1;
+}
+
+/* 뒷면: 아직 뽑기 전 */
+.pick-card-back {
+  background-color: var(--card-navy);
+  /* 카드 뒷면 무늬 (작은 금색 점) */
+  background-image: radial-gradient(rgba(201, 169, 110, 0.18) 1px, transparent 1.5px);
+  background-size: 12px 12px;
+  /* 안쪽 금색 테두리 */
+  box-shadow:
+    inset 0 0 0 7px var(--card-navy),
+    inset 0 0 0 8px var(--card-gold);
+  color: #e6d3a3;
+}
+
+/* 카드 그림 (img/card-*.svg) */
+.pick-icon {
   display: block;
+  width: 64px;
+  height: 64px;
+}
+
+.pick-card-back .pick-name {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+/* 앞면: 뽑은 재료 */
+.pick-card-front {
+  background-color: var(--card-cream);
+  border: 1px solid var(--card-gold);
+  box-shadow: inset 0 0 0 5px var(--card-cream), inset 0 0 0 6px rgba(201, 169, 110, 0.5);
+  transform: rotateY(180deg);
+}
+
+.pick-card-front .pick-name {
   font-size: 13px;
-  color: var(--sub-color);
+  color: #9a7a3e;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+}
+
+.pick-card-front strong {
+  color: var(--card-navy);
+  font-size: 18px;
+  line-height: 1.4;
+  word-break: keep-all; /* 한글 낱말이 중간에 끊기지 않게 */
+}
+
+.pick-btn {
+  min-width: 200px;
+}
+
+/* 카드가 뒤집히는 동안 버튼을 잠깐 눌리지 않게 */
+.pick-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* 움직임을 줄이도록 설정한 사람에게는 애니메이션 없이 바로 보여주기 */
+@media (prefers-reduced-motion: reduce) {
+  .pick-card-inner {
+    transition: none;
+  }
 }
 
 /* 이야기 쓰기 */
@@ -341,6 +520,41 @@
   color: #444444;
 }
 
+/* ----- ⑥ 사이트 관리자 소개 ----- */
+.admin-box {
+  display: flow-root; /* 사진(float)이 상자 밖으로 삐져나오지 않게 */
+  max-width: 760px;
+}
+
+/* 작은 동그란 사진. 글이 사진의 둥근 모양을 따라 에워싸며 흘러요 */
+.admin-photo {
+  float: left;
+  width: 140px;
+  height: 140px;
+  margin: 4px 24px 8px 0;
+  border-radius: 50%;
+  object-fit: cover;
+  shape-outside: circle(50%);
+  shape-margin: 14px;
+}
+
+.admin-box p {
+  color: #444444;
+  line-height: 1.9;
+}
+
+/* 글 속 링크: 밑줄과 강조색으로 링크임을 알려줘요 */
+.text-link {
+  color: var(--point-color);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: bold;
+}
+
+.text-link:hover {
+  text-decoration-thickness: 2px;
+}
+
 /* ----- 휴대폰 화면 (768px 이하) ----- */
 @media (max-width: 768px) {
   .hero {
@@ -376,12 +590,45 @@
     gap: 10px;
   }
 
+  /* 책을 한 줄에 2권씩 */
+  .book-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px 14px;
+  }
+
+  .book-cover {
+    width: 88%;
+    padding: 16px 10px 12px 18px;
+  }
+
+  .book-cover-title {
+    font-size: 16px;
+  }
+
+  .book-desc {
+    font-size: 13px;
+  }
+
   .trickster-card p {
     display: none; /* 좁은 화면에서는 설명 숨기기 */
   }
 
   .pick-result {
     grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .pick-card {
+    height: 110px;
+  }
+
+  .pick-icon {
+    width: 44px;
+    height: 44px;
+  }
+
+  .pick-btn {
+    width: 100%;
   }
 
   .result {
@@ -391,5 +638,12 @@
   .result-buttons .btn {
     width: 100%;
     text-align: center;
+  }
+
+  /* 관리자 사진을 조금 작게 */
+  .admin-photo {
+    width: 96px;
+    height: 96px;
+    margin-right: 16px;
   }
 }

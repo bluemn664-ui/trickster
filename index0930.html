@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="세계의 트릭스터 이야기를 읽고, 나만의 트릭스터 동화를 만들어 보는 어린이 창의성 사이트">
   <title>트릭스터와 창의성</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
   <link rel="stylesheet" href="css/common.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
@@ -13,7 +14,7 @@
   <!-- ① 헤더 (메뉴) -->
   <header class="header">
     <div class="container header-inner">
-      <a href="index0930.html" class="logo">트릭스터와 창의성</a>
+      <a href="index0930.html" class="logo" title="홈으로"><img src="img/logo.svg" alt="트릭스터와 창의성 (홈으로)" class="logo-img"></a>
 
       <!-- 휴대폰에서만 보이는 메뉴 열기 버튼 -->
       <button type="button" class="menu-toggle" aria-label="메뉴 열기">
@@ -22,13 +23,11 @@
 
       <nav>
         <ul class="nav-menu">
-          <li><a href="index0930.html" class="active">홈</a></li>
           <li><a href="html/korea.html">한국</a></li>
           <li><a href="html/china.html">중국</a></li>
           <li><a href="html/japan.html">일본</a></li>
           <li><a href="html/usa.html">미국</a></li>
           <li><a href="html/world.html">세계</a></li>
-          <li><a href="#write">동화 만들기</a></li>
         </ul>
       </nav>
     </div>
@@ -47,8 +46,8 @@
           </p>
           <p>세계의 트릭스터 이야기를 읽고, 나만의 이야기를 만들어 보세요.</p>
           <div class="hero-buttons">
-            <a href="#write" class="btn btn-dark">동화 만들기</a>
             <a href="#tricksters" class="btn">트릭스터 만나기</a>
+            <a href="#write" class="btn btn-dark">동화 만들기</a>
           </div>
         </div>
         <img src="img/tiger_main.png" alt="소나무 가지 위의 까치를 바라보며 웃고 있는 호랑이" class="hero-img">
@@ -86,6 +85,88 @@
 
         <div class="center">
           <a href="html/world.html" class="btn">더 넓은 세계의 트릭스터 보기 →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ③-2 트릭스터 관련 책 -->
+    <!-- 책을 바꾸거나 추가하려면 <article class="book-card"> 블록을 복사해서 고치세요.
+         표지 색은 book-cover 의 style="background-color: ..." 를 바꾸면 돼요. -->
+    <section id="books" class="section">
+      <div class="container">
+        <h2 class="section-title">트릭스터를 더 만나는 책</h2>
+        <p class="section-desc">아이와 함께 읽을 그림책과, 부모님과 선생님을 위한 책을 골랐어요.</p>
+
+        <div class="book-list">
+          <article class="book-card">
+            <div class="book-cover" style="background-color: #c8553d;">
+              <span class="book-cover-title">호랑이<br>꼬리 낚시</span>
+              <span class="book-cover-author">김명수 · 이은천</span>
+            </div>
+            <span class="book-tag">어린이와 함께</span>
+            <h3>호랑이 꼬리 낚시</h3>
+            <p class="book-info">김명수 글 · 이은천 그림 · 애플트리태일즈 · 2011</p>
+            <p class="book-desc">
+              꾀 많은 토끼가 욕심 많은 호랑이를 여러 번 골탕 먹이는 우리 옛이야기예요.
+              동화 만들기의 예시 이야기 「토끼와 호랑이」와 같은 이야기랍니다.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover" style="background-color: #2f6b4f;">
+              <span class="book-cover-title">Anansi<br>the Spider</span>
+              <span class="book-cover-author">Gerald McDermott</span>
+            </div>
+            <span class="book-tag">어린이와 함께</span>
+            <h3>Anansi the Spider</h3>
+            <p class="book-info">제럴드 맥더멋 글·그림 · 1972 · 영어 그림책</p>
+            <p class="book-desc">
+              가나 아샨티족의 거미 트릭스터 아난시 이야기예요.
+              위험에 빠진 아난시를 여섯 아들이 저마다의 재주로 구해 내요. 칼데콧 아너상을 받았어요.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover" style="background-color: #8a6d3b;">
+              <span class="book-cover-title">한국<br>트릭스터담<br>연구</span>
+              <span class="book-cover-author">김기호</span>
+            </div>
+            <span class="book-tag book-tag-adult">부모님과 선생님께</span>
+            <h3>한국 트릭스터담 연구 : 호랑이 이야기를 중심으로</h3>
+            <p class="book-info">김기호 · 영남대학교 박사학위논문 · 2001</p>
+            <p class="book-desc">
+              우리 옛이야기 속 호랑이를 트릭스터로 읽어 낸 연구예요.
+              이 사이트 관리자의 박사학위논문으로, 한국 페이지의 호랑이 이야기를 더 깊이 이해할 수 있어요.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover" style="background-color: #1e2a42;">
+              <span class="book-cover-title">Trickster<br>Makes This<br>World</span>
+              <span class="book-cover-author">Lewis Hyde</span>
+            </div>
+            <span class="book-tag book-tag-adult">부모님과 선생님께</span>
+            <h3>Trickster Makes This World</h3>
+            <p class="book-info">루이스 하이드 · 1998 · 영어 원서</p>
+            <p class="book-desc">
+              트릭스터가 경계를 넘나드는 장난과 속임수로 새로운 것을 만들어 내는 힘을,
+              옛 신화부터 현대 예술까지 따라가며 살펴본 책이에요. 트릭스터와 창의성을 함께 생각하기 좋아요.
+            </p>
+          </article>
+
+          <article class="book-card">
+            <div class="book-cover" style="background-color: #6b4a3a;">
+              <span class="book-cover-title">The<br>Trickster</span>
+              <span class="book-cover-author">Paul Radin</span>
+            </div>
+            <span class="book-tag book-tag-adult">부모님과 선생님께</span>
+            <h3>The Trickster</h3>
+            <p class="book-info">폴 라딘 · 1956 · 영어 원서</p>
+            <p class="book-desc">
+              위네바고족(호청크족)의 트릭스터 왁준카가 이야기를 모으고 풀이한 트릭스터 연구의 고전이에요.
+              칼 융과 카를 케레니의 글도 함께 실려 있어요.
+            </p>
+          </article>
         </div>
       </div>
     </section>
@@ -128,15 +209,49 @@
           </div>
         </div>
 
-        <!-- 이야기 재료 뽑기 -->
+        <!-- 이야기 재료 뽑기: 뒤집힌 카드 3장을 뽑으면 한 장씩 뒤집혀요 -->
         <div class="pick-box">
-          <p>뭘 쓸지 모르겠다면 재료를 뽑아 보세요. 비어 있는 칸에 자동으로 들어가요.</p>
-          <button type="button" id="pick-btn" class="btn">재료 뽑기</button>
+          <h3 class="pick-title">이야기 재료 카드 뽑기</h3>
+          <p>뭘 쓸지 모르겠다면 카드를 뽑아 보세요. 뽑은 재료는 비어 있는 칸에 자동으로 들어가요.</p>
           <div class="pick-result">
-            <div class="pick-item"><span>트릭스터</span><strong id="pick-trickster">?</strong></div>
-            <div class="pick-item"><span>상대</span><strong id="pick-rival">?</strong></div>
-            <div class="pick-item"><span>배경</span><strong id="pick-place">?</strong></div>
+            <div class="pick-card">
+              <div class="pick-card-inner">
+                <div class="pick-card-back">
+                  <img src="img/card-trickster.svg" alt="" class="pick-icon">
+                  <span class="pick-name">트릭스터 카드</span>
+                </div>
+                <div class="pick-card-front">
+                  <span class="pick-name">트릭스터</span>
+                  <strong id="pick-trickster"></strong>
+                </div>
+              </div>
+            </div>
+            <div class="pick-card">
+              <div class="pick-card-inner">
+                <div class="pick-card-back">
+                  <img src="img/card-rival.svg" alt="" class="pick-icon">
+                  <span class="pick-name">상대 카드</span>
+                </div>
+                <div class="pick-card-front">
+                  <span class="pick-name">상대</span>
+                  <strong id="pick-rival"></strong>
+                </div>
+              </div>
+            </div>
+            <div class="pick-card">
+              <div class="pick-card-inner">
+                <div class="pick-card-back">
+                  <img src="img/card-place.svg" alt="" class="pick-icon">
+                  <span class="pick-name">배경 카드</span>
+                </div>
+                <div class="pick-card-front">
+                  <span class="pick-name">배경</span>
+                  <strong id="pick-place"></strong>
+                </div>
+              </div>
+            </div>
           </div>
+          <button type="button" id="pick-btn" class="btn btn-dark pick-btn">🎲 카드 뽑기</button>
         </div>
 
         <!-- 이야기 쓰기 -->
@@ -219,18 +334,36 @@
         <p>
           트릭스터 이야기는 정답이 하나로 정해지지 않은 애매한 상황에서, 주인공이 상황을 뒤집어
           새로운 결과를 만들어 내는 이야기입니다. 아이들은 이 과정을 따라가며 익숙한 생각을
-          다르게 바라보는 창의적인 사고를 경험할 수 있습니다.
+          다르게 바라보는 <a href="https://lewishyde.com/trickster/" target="_blank" rel="noopener" class="text-link" title="Lewis Hyde – Trickster (새 탭에서 열림)">창의적인 사고</a>를 경험할 수 있습니다.
         </p>
         <p>
-          이야기를 함께 읽은 뒤 "트릭스터의 꾀는 옳았을까?", "속은 쪽은 어떤 마음이었을까?"처럼
-          정답이 없는 질문으로 이야기를 나누어 주세요. 아이가 쓴 동화도 함께 읽고 칭찬해 주시면
-          큰 힘이 됩니다.
+          이야기를 함께 읽은 뒤 트릭스터의 얼굴을 함께 그려보시기 바랍니다.
+          혹은 함께 트릭스터의 흉내를 내면서 이야기의 한 장면을 역할극 형식으로 행위화 하면서 함께 놀이를 해보시기 바랍니다.
+          혹은 트릭스터의 가면을 그리고 그것을 쓴 채 적절한 공간에서 퍼레이드를 해보시기 바랍니다.
+          활동을 마친 뒤에는 활동하는 동안, 또는 활동을 마치고 나서 느낀 감정과 생각을 서로 나누어 보십시오.
+          그리고 그 느낌과 생각을 글로 써 보시기 바랍니다.
         </p>
+      </div>
+    </section>
+
+    <!-- ⑥ 사이트 관리자 소개 -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">사이트 관리자</h2>
+        <div class="admin-box">
+          <!-- 관리자 일러스트(img/admin.svg). 실제 사진으로 바꾸려면 src 를 사진 파일 이름으로 바꾸세요 -->
+          <img src="img/admin.svg" alt="사이트 관리자를 표현한 일러스트: 안경을 쓰고 웃고 있는 교수" class="admin-photo">
+          <p>
+            <strong>김기호</strong>는 현재 영남대학교 국어국문학과 교수이다. 그는 한국 트릭스터 설화,
+            호랑이 설화를 중심으로 박사학위를 받았다. 김기호는 설화와 글쓰기에 대한 연구를 하고 있으며,
+            동화작가이기도 하다. 현재 대학에서 글쓰기, 웹수사학, 상상력을 디자인하는 동화쓰기를 강의하고 있다.
+          </p>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- ⑥ 푸터 -->
+  <!-- ⑦ 푸터 -->
   <footer class="footer">
     <div class="container">
       <p>이미지 출처: AI</p>

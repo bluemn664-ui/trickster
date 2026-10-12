@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" role="img" aria-label="사이트 관리자 일러스트">
+  <!-- 50대 남성 교수 일러스트: 통통한 얼굴, 희끗한 머리, 안경, 한쪽 눈을 찡긋한 장난스러운 표정 -->
+  <defs>
+    <clipPath id="round">
+      <circle cx="100" cy="100" r="100"/>
+    </clipPath>
+  </defs>
+
+  <g clip-path="url(#round)">
+    <!-- 배경 -->
+    <rect width="200" height="200" fill="#fff1e6"/>
+    <circle cx="100" cy="100" r="78" fill="#ffe3cc"/>
+
+    <!-- 인물을 조금 크게 확대 -->
+    <g transform="translate(100 112) scale(1.3) translate(-100 -100)">
+
+    <!-- 재킷 (넉넉한 어깨) -->
+    <path d="M8 200 Q14 146 100 138 Q186 146 192 200 Z" fill="#2f3e57"/>
+    <!-- 셔츠 -->
+    <path d="M72 142 L100 182 L128 142 Q100 136 72 142 Z" fill="#ffffff"/>
+    <!-- 넥타이 (사이트 강조색) -->
+    <path d="M95 152 L105 152 L108 160 L103 192 L97 192 L92 160 Z" fill="#e8590c"/>
+    <path d="M94 145 L106 145 L105 153 L95 153 Z" fill="#c94c0a"/>
+    <!-- 재킷 깃 -->
+    <path d="M72 142 L96 186 L84 200 L54 154 Z" fill="#26334a"/>
+    <path d="M128 142 L104 186 L116 200 L146 154 Z" fill="#26334a"/>
+
+    <!-- 목 -->
+    <path d="M80 124 L120 124 L124 146 Q100 156 76 146 Z" fill="#e9b893"/>
+
+    <!-- 귀 -->
+    <ellipse cx="54" cy="96" rx="8" ry="11" fill="#f2c6a2"/>
+    <ellipse cx="146" cy="96" rx="8" ry="11" fill="#f2c6a2"/>
+
+    <!-- 통통한 얼굴 (아래쪽 볼살이 넉넉하게) -->
+    <path d="M55 92 Q55 50 100 50 Q145 50 145 92 Q148 132 100 140 Q52 132 55 92 Z" fill="#f6d3b2"/>
+    <!-- 두 겹 턱 -->
+    <path d="M86 135 Q100 142 114 135" fill="none" stroke="#e3b28f" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- 희끗한 머리 (이마가 조금 넓은 모습) -->
+    <path d="M55 98 Q49 54 92 44 Q128 38 143 64 Q151 80 145 98 Q141 76 128 68 Q112 62 100 64 Q82 64 71 72 Q59 82 55 98 Z" fill="#8f9298"/>
+    <path d="M76 60 Q96 50 118 54" fill="none" stroke="#c9cbd0" stroke-width="4" stroke-linecap="round"/>
+    <path d="M57 92 Q56 84 59 78" fill="none" stroke="#c9cbd0" stroke-width="3" stroke-linecap="round"/>
+    <path d="M143 92 Q144 84 141 78" fill="none" stroke="#c9cbd0" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- 눈썹: 왼쪽은 장난스럽게 번쩍 치켜올리고, 오른쪽은 찡긋하며 내림 -->
+    <path d="M70 75 Q80 64 91 73" fill="none" stroke="#6f7278" stroke-width="3.8" stroke-linecap="round"/>
+    <path d="M109 81 Q120 79 131 84" fill="none" stroke="#6f7278" stroke-width="3.8" stroke-linecap="round"/>
+
+    <!-- 눈: 왼쪽은 동그랗게 뜨고, 오른쪽은 찡긋 -->
+    <circle cx="81" cy="92" r="3.6" fill="#3a2a20"/>
+    <circle cx="82.2" cy="90.8" r="1.1" fill="#ffffff"/>
+    <path d="M112 94 Q119 88 126 94" fill="none" stroke="#3a2a20" stroke-width="2.8" stroke-linecap="round"/>
+    <!-- 찡긋한 눈가 주름 -->
+    <path d="M131 90 L136 88" stroke="#d9a986" stroke-width="1.6" stroke-linecap="round"/>
+    <path d="M131 95 L137 96" stroke="#d9a986" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- 안경 -->
+    <rect x="66" y="82" width="29" height="21" rx="9" fill="#ffffff" fill-opacity="0.18" stroke="#3b3f47" stroke-width="2.6"/>
+    <rect x="105" y="82" width="29" height="21" rx="9" fill="#ffffff" fill-opacity="0.18" stroke="#3b3f47" stroke-width="2.6"/>
+    <path d="M95 90 Q100 86 105 90" fill="none" stroke="#3b3f47" stroke-width="2.6"/>
+    <path d="M66 89 L55 87" stroke="#3b3f47" stroke-width="2.6" stroke-linecap="round"/>
+    <path d="M134 89 L145 87" stroke="#3b3f47" stroke-width="2.6" stroke-linecap="round"/>
+
+    <!-- 동그란 코 -->
+    <path d="M99 99 Q93 110 100 112 Q106 112 105 107" fill="none" stroke="#d9a986" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <!-- 통통한 볼 -->
+    <ellipse cx="70" cy="113" rx="10" ry="6" fill="#f2a98a" fill-opacity="0.55"/>
+    <ellipse cx="130" cy="113" rx="10" ry="6" fill="#f2a98a" fill-opacity="0.55"/>
+
+    <!-- 한쪽 입꼬리가 올라간 장난스러운 웃음 + 살짝 내민 혀 -->
+    <path d="M84 116 Q100 134 119 111 Q103 122 84 116 Z" fill="#8a4532"/>
+    <path d="M100 125 Q108 129 114 119 Q107 121 100 125 Z" fill="#e8706a"/>
+    <path d="M84 116 Q100 134 119 111" fill="none" stroke="#7a3b2a" stroke-width="2.2" stroke-linecap="round"/>
+    <!-- 올라간 입꼬리 옆 보조개 -->
+    <path d="M122 108 Q124 112 121 115" fill="none" stroke="#d9a986" stroke-width="1.8" stroke-linecap="round"/>
+    </g>
+  </g>
+</svg>

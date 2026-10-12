@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#d9c08c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 트릭스터 카드: 한쪽 눈을 찡긋하는 여우 -->
+  <path d="M13 11 L25 24 Q32 21 39 24 L51 11 L48 33 Q45 45 32 54 Q19 45 16 33 Z"/>
+  <path d="M19 36 L32 50 L45 36"/>
+  <path d="M21 31 Q24.5 27.5 28 31"/>
+  <circle cx="40" cy="30.5" r="2" fill="#d9c08c" stroke="none"/>
+  <circle cx="32" cy="49" r="2.4" fill="#d9c08c" stroke="none"/>
+</svg>

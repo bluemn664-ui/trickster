@@ -71,15 +71,41 @@ const result = document.getElementById("result");
 
 let selectedResult = ""; // 5단계에서 고른 결과 (성공 / 실패 / 전혀 새로운 결과)
 
-// ----- 3. 재료 뽑기 -----
-document.getElementById("pick-btn").addEventListener("click", function () {
+// ----- 3. 재료 뽑기 (카드 뒤집기) -----
+const pickButton = document.getElementById("pick-btn");
+const pickCards = document.querySelectorAll(".pick-card");
+
+pickButton.addEventListener("click", function () {
   const trickster = pickOne(tricksters);
   const rival = pickOne(rivals);
   const place = pickOne(places);
 
-  document.getElementById("pick-trickster").textContent = trickster;
-  document.getElementById("pick-rival").textContent = rival;
-  document.getElementById("pick-place").textContent = place;
+  pickButton.disabled = true;
+
+  // 이미 뒤집힌 카드가 있으면 먼저 덮었다가(0.6초) 새 재료로 다시 뒤집어요
+  const alreadyOpen = pickCards[0].classList.contains("flipped");
+  pickCards.forEach(function (card) {
+    card.classList.remove("flipped");
+  });
+
+  setTimeout(function () {
+    document.getElementById("pick-trickster").textContent = trickster;
+    document.getElementById("pick-rival").textContent = rival;
+    document.getElementById("pick-place").textContent = place;
+
+    // 카드를 0.25초 간격으로 한 장씩 뒤집기
+    pickCards.forEach(function (card, i) {
+      setTimeout(function () {
+        card.classList.add("flipped");
+      }, i * 250);
+    });
+
+    // 마지막 카드까지 뒤집힌 뒤 버튼 다시 켜기
+    setTimeout(function () {
+      pickButton.disabled = false;
+      pickButton.textContent = "🎲 다시 뽑기";
+    }, pickCards.length * 250 + 600);
+  }, alreadyOpen ? 600 : 0);
 
   // 주인공, 상대 칸이 비어 있을 때만 뽑은 재료를 넣어 줌
   if (stepInputs[0].value.trim() === "") {

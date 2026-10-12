@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" role="img" aria-label="트릭스터와 창의성">
+  <!-- 트릭스터 기호: 반씩 다른 두 얼굴(뒤집기) + 찡긋한 눈 + 한쪽만 올라간 장난스러운 웃음 -->
+  <!-- 왼쪽 얼굴 (주황) -->
+  <circle cx="24" cy="24" r="22" fill="#e8590c"/>
+  <!-- 오른쪽 얼굴 (검정) -->
+  <path d="M24 2 A22 22 0 0 1 24 46 Z" fill="#222222"/>
+  <!-- 왼쪽 눈: 찡긋 -->
+  <path d="M10.5 20 Q14 15.5 17.5 20" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- 오른쪽 눈: 동그랗게 뜬 눈 -->
+  <circle cx="32" cy="18.5" r="3" fill="#e8590c"/>
+  <!-- 입: 오른쪽만 올라가며 끝이 말린 웃음 -->
+  <path d="M12 29 Q22 37 33 28 Q36.5 25.5 34.5 23" fill="none" stroke="#ffffff" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

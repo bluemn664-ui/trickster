@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#d9c08c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 상대 카드: 뿔 달린 도깨비 -->
+  <path d="M22 24 Q11 22 9 9 Q17 16 28 20 Z" fill="#d9c08c"/>
+  <path d="M42 24 Q53 22 55 9 Q47 16 36 20 Z" fill="#d9c08c"/>
+  <circle cx="32" cy="37" r="17"/>
+  <path d="M23 31 L29 34"/>
+  <path d="M41 31 L35 34"/>
+  <circle cx="27" cy="38" r="1.9" fill="#d9c08c" stroke="none"/>
+  <circle cx="37" cy="38" r="1.9" fill="#d9c08c" stroke="none"/>
+  <path d="M24 46 L28 44 L32 46 L36 44 L40 46"/>
+</svg>

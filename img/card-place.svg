@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none" stroke="#d9c08c" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round">
+  <!-- 배경 카드: 해와 산, 물결 -->
+  <circle cx="45" cy="17" r="6"/>
+  <path d="M6 47 L22 24 L32 37 L40 28 L58 47 Z"/>
+  <path d="M18 30 L22 24 L26 29"/>
+  <path d="M8 55 Q14 51 20 55 T32 55 T44 55 T56 55"/>
+</svg>

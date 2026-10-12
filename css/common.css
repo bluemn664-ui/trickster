@@ -25,7 +25,7 @@ html {
 
 /* 링크로 이동했을 때 고정된 헤더에 제목이 가려지지 않게 */
 [id] {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 body {
@@ -75,12 +75,24 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 84px;
 }
 
 .logo {
-  font-size: 20px;
-  font-weight: bold;
+  display: block;
+}
+
+/* 로고 기호 (img/logo.svg) */
+.logo-img {
+  display: block;
+  width: 54px;
+  height: 54px;
+  transition: transform 0.3s;
+}
+
+/* 마우스를 올리면 살짝 기울어지며 장난을 쳐요 */
+.logo:hover .logo-img {
+  transform: rotate(-12deg) scale(1.08);
 }
 
 .nav-menu {
@@ -191,13 +203,14 @@ ul {
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
+    margin-left: auto; /* 메뉴 열기 버튼을 오른쪽 끝으로 */
   }
 
   /* 메뉴는 평소에 숨겨 두고, 메뉴 열기 버튼을 누르면 보여줌 */
   .nav-menu {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 84px;
     left: 0;
     right: 0;
     flex-direction: column;
